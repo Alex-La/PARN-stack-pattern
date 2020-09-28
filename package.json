@@ -1,0 +1,28 @@
+{
+  "name": "PARN-stack-pattern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Alex-La/PARN-stack-pattern.git",
+  "author": "Alex-La <lars6162@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node index.js",
+    "server": "nodemon index.js",
+    "client": "yarn --cwd client start",
+    "client:install": "yarn --cwd client install",
+    "client:build": "yarn --cwd client build",
+    "dev": "cross-env NODE_ENV=development concurrently \"yarn server\" \"yarn client\""
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "apollo-datasource": "^0.7.2",
+    "apollo-server-express": "^2.17.0",
+    "config": "^3.3.1",
+    "pg": "^8.3.3",
+    "sequelize": "^6.3.5"
+  }
+}
